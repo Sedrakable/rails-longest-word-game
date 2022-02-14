@@ -1,0 +1,8 @@
+<h1>Result</h1>
+<% if !@result %>
+  <p>Sorry but <strong id="word"><%= params[:word] %></strong> can't be built out of <span id="letters"><%= params[:letters] %></span></p>
+<% elsif !@api %>
+  <p>Sorry! <strong id="word"><%= params[:word] %></strong> is not a valid english word</p>
+<% else %>
+  <p>Congratulations! <strong id="word"><%= params[:word] %></strong> is a valid english word</p>
+<% end %>
